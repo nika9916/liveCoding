@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url(../fonts/Raleway-Medium.ttf);
+  }
+  
+*,
+::before,
+::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+  padding: 3rem 4rem;
+  color: white;
+  background-color: tan;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 3rem;
+}
+
+.cards-container div {
+  background-color: maroon;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 4%;
+}
+
+.cards-container div:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.cards-container div img {
+  width: 100%;
+}
+
+.cards-container div span:first-child {
+  display: flex;
+  justify-content: right;
+}
+
+.cards-container div h2 {
+  font-size: 1.5rem;
+}
+
+
+.cards-container div h3 {
+  font-size: 1rem;
+}
+
+.cards-container div span:last-child {
+  font-size: 0.6rem;
+}
+
+@media (max-width: 1050px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+    
+  }
+  html {
+    font-size: 10px;
+  }
+}
