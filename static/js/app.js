@@ -92,10 +92,9 @@ dataAraay.forEach(item => {
     const lastName = item.userLastName;
     const age = item.userAge;
 
-    const address = item.userAddresses[0]
-    // const address = item.userAddresses.forEach(item => {
-    //     item
-    // })
+    const address = item.userAddresses.map(item => {
+        return item
+    })
 
     const card = document.createElement("div");
     const cardConteiner = document.querySelector(".cards-container");
